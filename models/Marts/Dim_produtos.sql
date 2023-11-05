@@ -43,7 +43,7 @@ with
             stg_produtos.id_fornecedor=stg_fornecedores.id_fornecedor
     )
 
-    ,criar_chaves as (
+    ,criar_chave as (
         select
         row_number() over(order by id_produto) as pk_produto
         ,*
@@ -51,4 +51,4 @@ with
     )
 
 select *
-from criar_chaves
+from criar_chave

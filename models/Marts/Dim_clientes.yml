@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: Dim_clientes
+    description: Essa é a dimensão com informações dos clientes.
+    columns:
+      - name: pk_cliente
+        description: Essa é a chave primaria da dimensão clientes.
+        tests:
+          - unique
+          - not_null
+          
+
+      - name: id_cliente
+        description: Completar Documentaçao.
+        tests:
+          - unique
+          - not_null
+             
+             
+      - name: nome_cliente
+        description: Completar Documentaçao.
+        
+      - name: empresa_cliente
+        description: Completar Documentaçao.
+        
+      - name: endereco_cliente
+        description: Completar Documentaçao.
+        
+      - name: cep_cliente
+        description: Completar Documentaçao.
+        
+      - name: cidade_cliente
+        description: Completar Documentaçao.
+        
+      - name: regiao_cliente
+        description: Completar Documentaçao.
+        
+      - name: pais_cliente
+        description: Completar Documentaçao.
+        
+
