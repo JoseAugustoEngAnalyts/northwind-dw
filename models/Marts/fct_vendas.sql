@@ -14,6 +14,11 @@ with
     from {{ ref('Dim_transportadoras') }}
 )
 
+, Dim_funcionarios as (
+    select *
+    from {{ ref('Dim_funcionarios') }}
+)
+
 , pedidos_itens as (
     select *
     from {{ ref('int_vendas__pedidos_itens') }}
@@ -23,7 +28,7 @@ with
     select
      pedidos_itens.sk_ordem_item
         , pedidos_itens.id_ordem
-        , pedidos_itens.id_funcionario
+        , Dim_funcionarios.pk_funcionario
         , Dim_clientes.pk_cliente
         , Dim_transportadoras.pk_transportadora
         , Dim_produtos.pk_produto
@@ -47,9 +52,11 @@ with
         pedidos_itens.id_cliente = Dim_clientes.id_cliente
     left join Dim_transportadoras on
         pedidos_itens.id_transportadora = Dim_transportadoras.id_transportadora
+    left join Dim_funcionarios on
+    pedidos_itens.id_funcionario = Dim_funcionarios.id_funcionario
 )
 
-, tranformacoes as (
+, transformacoes as (
     select *
     ,preco_da_unidade*quantidade_ordem_detalhe as total_bruto
     ,(1-desconto_perc_ordem_detalhe)*preco_da_unidade*quantidade_ordem_detalhe as total_liquido_venda
@@ -63,7 +70,7 @@ with
 )
 
 select *
-from tranformacoes
+from transformacoes
 
 
    
