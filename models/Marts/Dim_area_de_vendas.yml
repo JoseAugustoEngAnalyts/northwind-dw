@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: Dim_area_de_vendas
+    description: Essa é a tabela dimensão de area de vendas.
+    columns:
+      - name: sk_Funcionario_area_de_venda
+        description: Essa coluna é da chave surrogate com a junção do id territorio e do id funcionario.
+        tests:
+          - unique
+          - not_null
+           
+
+      - name: id_funcionario
+        description: Essa coluna é
+
+      - name: id_territorio
+        description: Essa coluna é
+
+      - name: id_regiao
+        description: Essa coluna é
+
+      - name: descricao_territorio
+        description: Essa coluna é
+
+      - name: descricao_regiao
+        description: Essa coluna é
+
+      - name: ultimo_nome
+        description: Essa coluna é
+
+      - name: primeiro_nome
+        description: Essa coluna é
+
+      - name: funcao_do_funcionario
+        description: Essa coluna é
+
+      - name: titulo_cortesia
+        description: Essa coluna é
+
+      - name: data_de_aniversario
+        description: Essa coluna é
+
+      - name: data_de_contratacao
+        description: Essa coluna é
+
+      - name: endereco_do_funcionario
+        description: Essa coluna é
+
+      - name: cidade_do_funcionario
+        description: Essa coluna é
+
+      - name: regiao_do_funcionario
+        description: Essa coluna é
+
+      - name: cep_do_funcionario
+        description: Essa coluna é
+
+      - name: pais_do_funcionario
+        description: Essa coluna é
+
+      - name: telefone_do_funcionario
+        description: Essa coluna é
+
+      - name: extensao_funcionario
+        description: Essa coluna é
+
+      - name: descricao_curriculo
+        description: Essa coluna é
+
+      - name: hierarquia_do_fu
+        description: Essa coluna é

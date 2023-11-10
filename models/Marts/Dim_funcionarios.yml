@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: Dim_funcionarios
+    description: Essa tabela é a dimensão funcionarios.
+    columns:
+      - name: pk_funcionario
+        description: Essa coluna é a chave primaria baseada no id funcionario.
+        tests:
+          - unique
+          - not_null
+
+      - name: id_funcionario
+        description: Essa coluna é id de funcionarios.
+        tests:
+          - unique
+          - not_null
+          
+      - name: ultimo_nome
+        description: Essa coluna é o ultimo nome do funcionario.
+        tests:
+          - unique
+              
+      - name: primeiro_nome
+        description: Essa coluna é o primeiro nome do funcionario.
+
+      - name: funcao_do_funcionario
+        description: Essa coluna é função exercida pelo funcionario.
+
+      - name: titulo_cortesia
+        description: Essa coluna é titulo como é enderecado o funcionario.
+
+      - name: data_de_aniversario
+        description: Essa coluna é a data de aniversario do funcionario.
+
+      - name: data_de_contratacao
+        description: Essa coluna é a data de contratação do funcionario.
+        
+      - name: endereco_do_funcionario
+        description: Essa coluna é o endereco do funcionario.
+
+      - name: cidade_do_funcionario
+        description: Essa coluna é a cidade do funcionario.
+
+      - name: regiao_do_funcionario
+        description: Essa coluna é a regiao do funcionario.
+
+      - name: cep_do_funcionario
+        description: Essa coluna é o cep do funcionario.
+        
+      - name: pais_do_funcionario
+        description: Essa coluna é pais do funcionario.
+
+      - name: telefone_do_funcionario
+        description: Essa coluna é telefone do funcionario.
+
+      - name: extensao_funcionario
+        description: Essa coluna é area de venda do funcionario.
+
+      - name: descricao_curriculo
+        description: Essa coluna é descricao curricular do funcionario.
+
+      - name: hierarquia_do_funcionario      
+        description: Essa coluna é hierarquia do funcionario.

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_funcionario__area_vendas
+    description: Essa é a transformação intermediaria para a dimensão funcionario total
+    columns:
+      - name: sk_Funcionario_area_de_venda
+        tests:
+        - unique
+        - not_null
+
+      - name: id_funcionario
+        description: Essa coluna é o id de funcionario.
+        tests:
+        - not_null
+            
+      - name: id_territorio
+        description: Essa coluna é o id do territorio ou area de vendas.
+        tests:
+          - unique
+          - not_null
+              
+            

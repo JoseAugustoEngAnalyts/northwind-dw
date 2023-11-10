@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: int_territorio__regiao_pais
+    description: Essa é a tabela intermediaria entre territorio e regiao.
+    columns:
+      - name: pk_territorio
+        description: essa é a coluna de chave primaria 
+        tests:
+          - unique
+          - not_null
+
+      - name: id_territorio
+        description: Essa é a coluna de id do territorio.
+        tests:
+          - unique
+          - not_null
+
+      - name: id_regiao
+        description: Essa é a coluna de id da regiao.
+        tests:
+          -  not_null
+               
+              

@@ -18,3 +18,7 @@ sources:
                 - not_null
       - name: order_details
       - name: shippers
+      - name: employees
+      - name: employee_territories
+      - name: territories
+      - name: region
