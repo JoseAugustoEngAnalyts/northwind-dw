@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: Dim_fornecedores
+    description: Essa é a tabela dimensão fornecedores.
+    columns :
+      - name: pk_produto
+        description: Essa é a coluna da chave primaria baseada no id produto.
+        tests:
+          - unique
+          - not_null
+          
+      - name : id_produto
+        description : Essa é a coluna é id produto baseada na tabela produtos
+
+      - name : id_fornecedor
+        description : Essa é a coluna é id fornecedor baseada na tabela fornecedor.
+
+      - name : nome_fornecedor
+        description : Essa é a coluna é o nome do fornecedor.
+
+      - name : contato_fornecedor
+        description : Essa é a coluna é o contato do fornecedor.
+
+      - name : contato_funcao
+        description : Essa é a coluna é o contato do fuuncionario no fornecedor.
+
+      - name : endereco_fornecedor
+        description : Essa é a coluna é o endereço do fornecedor.
+
+      - name : cidade_fornecedor
+        description : Essa é a coluna é a cidade od fornecedor.
+
+      - name : regiao_fornecedor
+        description : Essa é a coluna é a regiao do fornecedor.
+
+      - name : cep_fornecedor
+        description : Essa é a coluna  é o cep do fornecedor.
+
+      - name : pais_fornecedor
+        description : Essa é a coluna é o pais do fornecedor
