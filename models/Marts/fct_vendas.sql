@@ -19,6 +19,11 @@ with
     from {{ ref('Dim_funcionarios') }}
 )
 
+, Dim_Fornecedores as (
+    select *
+    from {{ ref('Dim_fornecedores') }}
+)
+
 , pedidos_itens as (
     select *
     from {{ ref('int_vendas__pedidos_itens') }}
@@ -53,7 +58,9 @@ with
     left join Dim_transportadoras on
         pedidos_itens.id_transportadora = Dim_transportadoras.id_transportadora
     left join Dim_funcionarios on
-    pedidos_itens.id_funcionario = Dim_funcionarios.id_funcionario
+        pedidos_itens.id_funcionario = Dim_funcionarios.id_funcionario
+    left join Dim_Fornecedores on
+        pedidos_itens.id_produto = Dim_Fornecedores.id_produto
 )
 
 , transformacoes as (
